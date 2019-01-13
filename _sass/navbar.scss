@@ -1,0 +1,125 @@
+.page-navigation {
+
+ height: 70px;
+
+ border-top: 4px dashed $mainColor;
+ border-bottom: 4px dashed $mainColor;
+
+ background: $backgroundColor;
+
+}
+
+.menu {
+
+	height: 100%;
+
+	display: flex;
+	flex-flow: row;
+
+	list-style-type: none;
+
+}
+
+.menu-item {
+
+	flex: 1;
+
+	color: $mainColor;
+
+	position: relative;
+
+}
+
+.menu-item:hover {
+
+	cursor: pointer;
+
+}
+
+.menu-item--title {
+
+	margin: 0;
+
+	width: 100%;
+
+	font-size: 28px;
+	font-family: Blrrpixs016;
+	text-align: center;
+	text-decoration: none;
+
+	color: $mainColor;
+
+
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+
+
+}
+
+.menu-item:hover > .menu-item--title {
+
+	font-weight: bold;
+	text-shadow: 2px 2px green;
+
+	transition: text-shadow .2s ease-in-out;
+
+}
+
+
+.menu-item--title_submenu:before {
+
+	content: '\025B8';
+
+}
+
+.menu-item:hover > .menu-item--title_submenu:before {
+
+	content: "\025BE";
+
+}
+
+.submenu {
+
+	display: flex;
+	flex-flow: column;
+
+	position: relative;
+	z-index: -1;
+
+	list-style-type: none;
+	
+	margin-top: 70px;
+
+	transform: translateY(-100%);
+	transition: transform 1s ease-in-out;
+
+}
+
+.menu-item:hover > .submenu {
+
+	transform: translateY(0);
+	transition: transform .5s ease-in-out;
+
+}
+
+.submenu-item--title:hover {
+
+	color: $backgroundColor;
+	background: $mainColor;
+
+}
+
+.submenu-item--title {
+
+	display: block;
+
+	font-size: 34px;
+	text-align: center;
+	font-family: Blrrpixs016;
+	text-decoration: none;
+	color: $mainColor;
+
+	padding: 10px 0px;
+
+}

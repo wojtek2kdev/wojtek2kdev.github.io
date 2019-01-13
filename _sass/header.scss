@@ -1,0 +1,100 @@
+.page-header {
+	
+	height: 300px;
+
+	padding-top: 20px;
+
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	grid-template-rows: 80px 1fr;
+	grid-gap: 10px;
+
+	background: $backgroundColor;
+
+}
+
+.figure {
+
+	grid-column: 1 / 2;
+	grid-row: 1 / 3;
+
+}
+
+.figure-image--logo {
+
+	width: 200px;
+	height: auto;
+
+}
+
+.page-header--author {
+
+	margin: 0;
+
+	font-family: Blrrpixs016;
+	font-size: 56px;
+	text-shadow: 3px 3px green;
+	color: $mainColor;
+
+	cursor: default;
+
+}
+
+.page-header--quote {
+
+	font-family: Blrrpixs016;
+	font-size: 36px;
+
+	margin: 0;
+
+	color: $mainColor;
+
+	cursor: default
+
+}
+
+.page-header--socials {
+
+	list-style-type: none;
+
+	display: flex;
+	flex-flow: row;
+
+	padding: 0;
+	margin: 0;
+
+}
+
+.page-header--socials > li {
+
+	flex: 1;
+
+	height: auto;
+
+	position: relative;
+	padding-top: 10%;
+
+	margin: 0px 10px;
+
+}
+
+.page-header--socials > li > a {
+
+	font-family: Socials;
+	font-size: 34px;
+	text-decoration: none;
+
+	transition: font-size .2s ease-in-out; 
+
+	color: $mainColor;
+
+}
+
+.page-header--socials > li > a:hover {
+
+	font-size: 42px;
+
+	transition: font-size .2s ease-in-out; 
+
+}
+
