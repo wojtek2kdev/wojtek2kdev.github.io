@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}" prefix="og: http://ogp.me/ns#" vocab="http://schema.org">
+
+  {% include head.html %}
+
+  <body>
+		<div class="page">
+			{% include header.html %}
+
+			{% include navbar.html %}
+
+			<main class="page-content">
+				<div class="wrapper">
+					{{ content }}
+				</div>
+			</main>
+			{% include footer.html %}
+		</div>
+  </body>
+
+</html>
