@@ -9,11 +9,19 @@
 title: wojtek2kdev 
 email: 
 description: 
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://wojtek2kdev.pl" # the base hostname & protocol for your site
 github_username: wojtek2kdev 
-paginate: 10
-paginate_path: "/post-:num/"
-
 # Build settings
 markdown: kramdown
+categories_names:
+  "node-js": "Node JS"
+  "sieci": "Sieci komputerowe"
+  "iot": "Internet of Things"
+  "narzedzia": "Narzedzia"
+  "testy": "Testowanie aplikacji"
+  "bazy-danych": "Bazy danych"
+  "git": "Git"
+  "rozne": "Rozne"
+  "projekty": "Projekty"
+  "poradniki": "Poradniki"
