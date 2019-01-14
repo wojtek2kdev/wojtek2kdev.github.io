@@ -5,8 +5,8 @@
 /* color palette */
 $backgroundColor: #010101;
 $footerColor: #424242;
-$textColor: #ffffff;
-$linkColor: #1c5d99;
+$textColor: #dddddd;
+$linkColor: #00C4FF;
 $mainColor: #1fcc16;
 
 body {
@@ -46,10 +46,14 @@ body, ul {
 }
 
 @include font("Blrrpixs016", "../assets/fonts/blrrpixs016");
-@include font("Engadget", "../assets/fonts/Engadget");
 @include font("Socials", "../assets/fonts/Socials");
+@include font("Engadget", "../assets/fonts/Engadget");
+@include font("Sanidana", "../assets/fonts/Sanidana");
+@include font("Anonymouspro", "../assets/fonts/anonymouspro");
 
 @import "page";
 @import "header";
 @import "navbar";
-
+@import "post";
+@import "category";
+@import "footer";
