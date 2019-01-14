@@ -1,0 +1,14 @@
+{% assign post=include.post %}
+<article class="post">
+	<header class="post-heading">
+		<a class="post-title">{{ post.title }}</a>
+		<p class="post-meta">
+				<time class="post-meta--time" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d-%m-%Y" }}</time>
+				{% if post.author %} • {{ post.author }}{% endif %}{% for category in post.categories %} • <a class="link post-meta--category" href="{{ site.url }}{{ site.baseurl }}/{{ category | url_encode }}">{{ site.categories_names[category] }}</a>{% endfor %}
+		</p>
+	</header>
+		<p class="post-preview">{{ post.excerpt | default: '' | strip_html | normalize_whitespace | truncate: 160, "…" | escape }}</p>
+	<p>
+		<a class="post-read" href="{{ post.url | relative_url }}">Czytaj całość </a>
+	</p>
+</article>
