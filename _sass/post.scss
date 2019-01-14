@@ -1,0 +1,112 @@
+.page-heading {
+
+	color: $mainColor;
+
+	padding-left: 20px;
+
+	font-size: 42px;
+
+}
+
+.post-list {
+
+	list-style-type: none;
+
+	display: flex;
+	flex-flow: column;
+
+	padding: 0px 30px;
+
+}
+
+.post {
+
+	display: flex;
+	flex-flow: column;
+
+}
+
+.post-heading {
+
+	flex: 0 1 70px;
+
+	border-bottom: 4px double $mainColor;
+
+}
+
+.post-title {
+
+	color: $mainColor;
+
+	font-size: 36px;
+	font-family: Blrrpixs016;
+	font-weight: 200;
+
+	min-width: 200px;
+
+}
+
+.post-title:hover {
+
+	font-weight: 500;
+	cursor: pointer;
+
+	text-shadow: 2px 2px green;
+
+}
+
+.link {
+
+	color: $linkColor;
+	text-decoration: none;
+
+}
+
+.link:hover {
+
+	text-decoration: underline;
+
+}
+
+.post-meta {
+
+	margin: 0;
+	padding: 5px 0;
+
+	color: $mainColor;
+
+	font-size: 18px;
+	font-family: Blrrpixs016; 
+
+}
+
+.post-preview {
+
+	color: $textColor;
+	font-family: Anonymouspro;
+	font-weight: 700;
+
+}
+
+.post-read {
+
+	font-family: Blrrpixs016; 
+	color: $mainColor;
+	font-size: 28px;
+	text-decoration: none;
+
+	padding: 5px;
+
+	border-width: 6px 3px 3px 6px;
+	border-color: $mainColor green green $mainColor;
+	border-style: solid;
+
+
+}
+
+.post-read:hover {
+
+	border-width: 3px 2px 2px 3px;
+
+}
+
