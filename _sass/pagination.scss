@@ -1,0 +1,29 @@
+.pagination {
+
+	position: relative;
+	height: 40px;
+
+}
+
+.pagination-list {
+
+	display: flex;
+	flex-flow: row;
+
+	position: absolute;
+	width: 500px;
+	height: inherit;
+
+}
+
+.pagination-item {
+
+	position: relative;
+
+	margin: 0px 5px;
+
+	border: 2px solid green;
+
+	flex: 1;
+		
+}
