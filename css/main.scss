@@ -5,9 +5,15 @@
 /* color palette */
 $backgroundColor: #010101;
 $footerColor: #424242;
-$textColor: #dddddd;
+$textColor: #ffffff;
 $linkColor: #00C4FF;
 $mainColor: #1fcc16;
+
+html {
+
+	font-size: 26px;
+
+}
 
 body {
 
@@ -57,3 +63,4 @@ body, ul {
 @import "post";
 @import "category";
 @import "footer";
+@import "pagination";
