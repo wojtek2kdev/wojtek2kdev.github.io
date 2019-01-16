@@ -6,26 +6,43 @@
 		<a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="pagination-link">&vltri;</a>
 	</li>
 	{% endif %}
-
-		{% if paginator.page > 2 and paginator.page < paginator.total_pages - 1 %} <!-- -->
-			{% assign start = paginator.page | minus: 1 %}
-			{% assign end = paginator.page | plus: 1 %}
-		{% elsif paginator.page > 2 and paginator.page > paginator.total_pages - 1 %}
-			{% assign start =  paginator.page | minus: 1 %}
-			{% assign end = paginator.total_pages %}
-		{% else %}
-			{% assign start = 1 %}
+	{% if paginator.total_pages > 4 %}
+	  {% assign pg = paginator.page %}
+		{% assign pgt = paginator.total_pages %}
+		{% assign beforepgt = pgt | minus: 1 %}
+		{% assign start = pg | minus: 1 %}
+		{% assign end = pg | plus: 1 %}
+		{% if pg == 1 or pg == 2 %}
+			{% assign start = 2 %}
 			{% assign end = 3 %}
+		{% elsif pg == beforepgt %}
+			{% assign end = pgt | minus: 1 %}
+		{% elsif pg == pgt %}
+			{% assign start = start | minus: 1 %}
+			{% assign end = pgt | minus: 1 %}
 		{% endif %}
+	{% else %}
+		{% assign start = 1 %}
+		{% assign end = paginator.total_pages %}
+	{% endif %}
+
+	<li class="pagination-item">
+		{% if paginator.page == 1 %}
+			<span class="pagination-link pagination-link--label">{{ 1 }}</span>
+		{% else %}
+			<a href="/" class="pagination-link">{{ 1 }}</a>
+		{% endif %}
+	</li>
+	{% if paginator.page > 2 %}
+	<li class="pagination-item pagination-item--dots">
+		<span class="dots">...</span>
+	</li>
+	{% endif %}
 
 	{% for page in (start..end) %}
 	{% if page == paginator.page %}
 		<li class="pagination-item">
 			<span class="pagination-link pagination-link--label">{{ page }}</span>
-		</li>
-	{% elsif page == 1 %}
-		<li class="pagination-item">
-			<a href="/" class="pagination-link">{{ page }}</a>
 		</li>
 	{% else %}
 		<li class="pagination-item">
@@ -33,6 +50,21 @@
 		</li>
 	{% endif %}
 	{% endfor %}
+
+	{% assign end_limit = paginator.total_pages | minus: 1 %}
+	{% if paginator.page < end_limit %} <!-- -->
+		<li class="pagination-item pagination-item--dots">
+			<span class="dots">...</span>
+		</li>
+	{% endif %}
+
+		<li class="pagination-item">
+			{% if paginator.page == paginator.total_pages %}
+				<span class="pagination-link pagination-link--label">{{ paginator.total_pages }}</span>
+			{% else %}
+				<a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', paginator.total_pages }}" class="pagination-link link">{{ paginator.total_pages }}</a>
+			{% endif %}
+		</li>
 
 	{% if paginator.next_page %}
 	<li class="pagination-item pagination-item--next">
