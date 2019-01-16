@@ -4,7 +4,7 @@
 
 	padding-left: 20px;
 
-	font-size: 42px;
+	font-size: 2rem;
 
 }
 
@@ -24,13 +24,21 @@
 	display: flex;
 	flex-flow: column;
 
+	border-bottom: 4px double $mainColor;
+
+	padding: 20px 0px;
+
+}
+
+.post-list > li:last-child > .post {
+
+	border: none;
+
 }
 
 .post-heading {
 
 	flex: 0 1 70px;
-
-	border-bottom: 4px double $mainColor;
 
 }
 
@@ -38,7 +46,7 @@
 
 	color: $mainColor;
 
-	font-size: 36px;
+	font-size: 1.5rem;
 	font-family: Blrrpixs016;
 	font-weight: 200;
 
@@ -75,7 +83,7 @@
 
 	color: $mainColor;
 
-	font-size: 18px;
+	font-size: 0.8rem;
 	font-family: Blrrpixs016; 
 
 }
@@ -84,7 +92,10 @@
 
 	color: $textColor;
 	font-family: Anonymouspro;
-	font-weight: 700;
+	font-size: 0.85rem;
+
+	padding: 10px 0px;
+	margin: 0;
 
 }
 
@@ -92,7 +103,7 @@
 
 	font-family: Blrrpixs016; 
 	color: $mainColor;
-	font-size: 28px;
+	font-size: 1rem;
 	text-decoration: none;
 
 	padding: 5px;
