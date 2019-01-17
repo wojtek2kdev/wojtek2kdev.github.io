@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<article class="post no-border">
+	<header class="post-heading">
+		<a class="post-title" href="{{ post.url | relative_url }}">{{ page.title }}</a>
+		<p class="post-meta">
+				<time class="post-meta--time" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%d-%m-%Y" }}</time>
+				{% if page.author %} • {{ page.author }}{% endif %}{% for category in page.categories %} • <a class="link post-meta--category" href="{{ site.url }}{{ site.baseurl }}/{{ category | url_encode }}">{{ site.categories_names[category] }}</a>{% endfor %}
+		</p>
+	</header>
+
+  <div class="post-content" property="articleBody">
+    {{ content }}
+  </div>
+
+  {% if site.disqus.shortname %}
+    {% include disqus_comments.html %}
+  {% endif %}
+</article>
