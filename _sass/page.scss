@@ -1,10 +1,33 @@
 .page {
 
-  width: 1300px;
 	margin-left: auto;
 	margin-right: auto;
 
 	display: flex;
 	flex-flow: column;
+
+	max-width: 1200px;
+
+}
+
+.page-content {
+
+	padding: 0 30px;
+
+}
+
+@media all and (max-height: 995px){
+
+	.page {
+
+		width: 100vw;
+
+	}
+
+	.page-content {
+
+		padding: 0 10px;
+
+	}
 
 }

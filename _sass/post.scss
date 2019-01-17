@@ -2,8 +2,6 @@
 
 	color: $mainColor;
 
-	padding-left: 20px;
-
 	font-size: 2rem;
 
 }
@@ -14,8 +12,6 @@
 
 	display: flex;
 	flex-flow: column;
-
-	padding: 0px 30px;
 
 }
 
@@ -46,9 +42,10 @@
 
 	color: $mainColor;
 
-	font-size: 1.5rem;
+	font-size: 1.8rem;
 	font-family: Blrrpixs016;
 	font-weight: 200;
+	text-decoration: none;
 
 	min-width: 200px;
 
@@ -121,3 +118,44 @@
 
 }
 
+.post-content {
+
+	color: #eee;
+	font-size: 0.95rem;
+
+}
+
+.no-border {
+
+	border: none;
+
+}
+
+.post-content--table td, .post-content--table th {
+
+	border: 2px solid #888;
+
+	padding: 5px;
+
+}
+
+blockquote{
+
+	border-left: 4px solid #ddd;
+
+	padding-left: 15px;
+
+	font-style: italic;
+
+}
+
+@media all and (max-width: 670px){
+
+	.post-content img {
+
+		width: 100%;
+		height: auto;
+
+	}
+
+}
