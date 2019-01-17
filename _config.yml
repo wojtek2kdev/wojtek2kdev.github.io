@@ -14,8 +14,8 @@ url: "https://wojtek2kdev.pl" # the base hostname & protocol for your site
 github_username: wojtek2kdev 
 # Build settings
 markdown: kramdown
-paginate: 1
-paginate_path: "page:num"
+paginate: 3
+paginate_path: "page-:num"
 categories_names:
   "node-js": "Node JS"
   "sieci": "Sieci komputerowe"
