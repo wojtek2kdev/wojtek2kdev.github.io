@@ -22,8 +22,8 @@
 			{% assign end = pgt | minus: 1 %}
 		{% endif %}
 	{% else %}
-		{% assign start = 1 %}
-		{% assign end = paginator.total_pages %}
+		{% assign start = 2 %}
+		{% assign end = paginator.total_pages | minus: 1 %}
 	{% endif %}
 
 	<li class="pagination-item">
@@ -35,7 +35,7 @@
 	</li>
 	{% if paginator.page > 2 %}
 	<li class="pagination-item pagination-item--dots">
-		<span class="dots">...</span>
+		<span class="pagination-link">...</span>
 	</li>
 	{% endif %}
 
@@ -54,7 +54,7 @@
 	{% assign end_limit = paginator.total_pages | minus: 1 %}
 	{% if paginator.page < end_limit %} <!-- -->
 		<li class="pagination-item pagination-item--dots">
-			<span class="dots">...</span>
+			<span class="pagination-link">...</span>
 		</li>
 	{% endif %}
 
