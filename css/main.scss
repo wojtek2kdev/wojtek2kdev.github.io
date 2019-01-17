@@ -19,12 +19,22 @@ body {
 
 	background: $backgroundColor;
 
+	font-family: AnonymousPro;
+
+	overflow-x: hidden;
+
 }
 
 body, ul {
 
 	margin: 0;
 	padding: 0;
+
+}
+
+strong {
+
+	color: #fff;
 
 }
 
@@ -64,3 +74,4 @@ body, ul {
 @import "category";
 @import "footer";
 @import "pagination";
+@import "rouge";
