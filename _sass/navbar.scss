@@ -122,6 +122,23 @@
 
 }
 
+.menu-icon {
+
+	width: 50px;
+
+	display: none;
+
+	fill: $mainColor;
+
+	position: fixed;
+	left: 100%;
+	transform: translateX(-100%);
+
+	padding: 10px;
+
+}
+
+
 @media all and (max-width: 670px){
 
 	.page-navigation {
@@ -129,5 +146,17 @@
 		display: none;
 
 	}
+
+	.menu-icon {
+
+		display: block;
+
+	}
+
+}
+
+.menu-icon--hidden {
+
+	display: none;
 
 }
