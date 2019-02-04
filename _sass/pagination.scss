@@ -21,7 +21,8 @@
 	left: 50%;
 	transform: translateX(-50%);
 
-	width: 800px;
+	width: 100%;
+	max-width: 600px;
 	height: inherit;
 
 }
@@ -72,3 +73,6 @@
 	color: $linkColor !important;
 
 }
+
+
+
