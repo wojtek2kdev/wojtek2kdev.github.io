@@ -18,6 +18,8 @@ disqus:
 markdown: kramdown
 paginate: 3
 paginate_path: "page-:num"
+feed:
+  path: "feeds/feed.xml"
 categories_names:
   "node-js": "Node JS"
   "sieci": "Sieci komputerowe"
@@ -30,6 +32,7 @@ categories_names:
   "projekty": "Projekty"
   "poradniki": "Poradniki"
 plugins: 
+  - jekyll-feed
   - jekyll-paginate
 exclude:
   - Gemfile
