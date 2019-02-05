@@ -16,7 +16,7 @@ disqus:
   shortname: wojtek2kdev-blog
 # Build settings
 markdown: kramdown
-paginate: 3
+paginate: 8
 paginate_path: "page-:num"
 feed:
   path: "feeds/feed.xml"
