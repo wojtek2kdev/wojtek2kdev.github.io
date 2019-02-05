@@ -122,17 +122,43 @@
 
 }
 
-.menu-icon {
-
-	width: 50px;
+.menu-mobile {
 
 	display: none;
 
-	fill: $mainColor;
-
 	position: fixed;
-	left: 100%;
-	transform: translateX(-100%);
+
+	z-index: 2;
+
+  width: 100vw;
+	 
+	background: black;
+
+	border-bottom: 1px solid $mainColor;
+
+}
+
+.menu-mobile--title {
+
+	flex: 1;
+
+}
+
+.mobile-title--author {
+
+	font-size: 1.8rem;
+
+	padding: 5px;
+	padding-left: 15px;
+
+}
+
+.menu-mobile--icon {
+
+	flex: 0 1 50px;
+	height: 50px;
+
+	fill: $mainColor;
 
 	padding: 10px;
 
@@ -147,15 +173,15 @@
 
 	}
 
-	.menu-icon {
+	.menu-mobile {
 
-		display: block;
+		display: flex;
 
 	}
 
 }
 
-.menu-icon--hidden {
+.icon-hidden {
 
 	display: none;
 
