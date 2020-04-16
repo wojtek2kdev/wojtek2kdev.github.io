@@ -32,6 +32,9 @@ categories_names:
   "projekty": "Projekty"
   "poradniki": "Poradniki"
   "osobiste": "Osobiste"
+  "oop": "OOP"
+  "automatyzacja": "Automatyzacja"
+  "projektowanie": "Projektowanie"
 plugins: 
   - jekyll-feed
   - jekyll-paginate
